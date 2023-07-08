@@ -1,0 +1,28 @@
+import random
+
+def main():
+    creature1 = input("Please enter the first creature: ")
+    creature2 = input("Please enter the second creature: ")
+    
+    #randomly generate a name for the new creature
+    new_creature_name = random.choice([creature1, creature2]) + random.choice([creature1, creature2])
+    
+    #randomly generate stats for the new creature
+    new_creature_weight = random.randint(1000, 2000)
+    new_creature_diet = random.choice(["herbivore", "carnivore"])
+    
+    #display the results to the user
+    print("Your new creature is called a {}!".format(new_creature_name))
+    print("This creature weighs {}lbs and is a {}.".format(new_creature_weight, new_creature_diet))
+    
+    #display a graphic confirming the creature was generated
+    print('''
+         ,
+        / \,,_  .'|
+    ,  /   ,-' \ /
+    \  \/\/:      /
+     \. /||\____/
+       ' ''~-----'
+    ''')
+    
+main()
